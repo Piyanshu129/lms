@@ -80,8 +80,8 @@ Clone and configure the backend:
 ![5ECD30C1-8ABB-4500-980B-C16CE79D8774](https://github.com/user-attachments/assets/4030cfd6-06bc-404a-8e2d-0015123637a8)
 
 
-git clone [<your-backend-repo-url>](https://github.com/Piyanshu129/lms/Backend)
-cd <[backend-repo-name](https://github.com/Piyanshu129/lms)>
+git clone (https://github.com/Piyanshu129/lms/Backend)
+cd <(https://github.com/Piyanshu129/lms)>
 
 Run the backend:
 
@@ -101,8 +101,8 @@ app.jwt.secret=your-super-secret-key-that-is-at-least-256-bits-long
 
 Clone and configure the frontend
 
-git clone [<your-backend-repo-url>](https://github.com/Piyanshu129/lms/Frontend)
-cd <[backend-repo-name](https://github.com/Piyanshu129/lms/Frontend)>
+git clone (https://github.com/Piyanshu129/lms/Frontend)
+cd <(https://github.com/Piyanshu129/lms/Frontend)>
 
 
 
