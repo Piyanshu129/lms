@@ -34,4 +34,8 @@ public class CourseController {
     var c = courseService.getCourseOrThrow(courseId);
     return Mapper.toCourseResponse(c, courseService.countLectures(courseId));
   }
+  @GetMapping("/{courseId}/completed-lectures")
+  public List<Long> getCompletedLectures(@PathVariable Long courseId, Authentication auth) {
+    return lectureService.getCompletedLectureIds(courseId, auth);
+  }
 }
