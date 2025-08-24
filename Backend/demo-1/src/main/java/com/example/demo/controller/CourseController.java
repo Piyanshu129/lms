@@ -13,9 +13,11 @@ import java.util.*;
 @RequestMapping("/api/courses")
 public class CourseController {
   private final CourseService courseService;
+  private final LectureService lectureService;
 
-  public CourseController(CourseService courseService) {
+  public CourseController(CourseService courseService, LectureService lectureService) {
     this.courseService = courseService;
+    this.lectureService = lectureService;
   }
 
   @GetMapping
