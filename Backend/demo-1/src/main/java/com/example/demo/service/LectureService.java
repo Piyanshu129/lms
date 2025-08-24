@@ -264,6 +264,15 @@ public class LectureService {
 
   return new QuizSubmissionResult(total, correct, score, passed);
   }
+
+  @Transactional(readOnly = true)
+  public List<Long> getCompletedLectureIds(Long courseId, Authentication auth) {
+    User student = currentUser(auth);
+    if (student.getRole() != Role.STUDENT) {
+      return List.of();
+    }
+    return progressRepo.findCompletedLectureIdsByStudentAndCourseId(student, courseId);
+  }
   
 //  @Transactional
 //  public QuizSubmissionResult submitQuiz(Long courseId, Long lectureId, QuizSubmissionRequest req, Authentication auth) {
